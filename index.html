@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500&family=Work+Sans:wght@700&display=swap"
+        rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <title> RocketNews </title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <main class="wrapper">
+        <header class="header">
+            <img src="assets/logo.svg" alt="RocketNews" class="logo">
+        </header>
+
+        <section class="section">
+            <h1 class="title">
+                atualize ideias e informações em 5 minutos.
+            </h1>
+
+            <div class="description">
+                <p>
+                    Tudo o que você precisa para começar seu dia bem e informado.
+                </p>
+                <p>
+                    Noticias sobre o universo Rocketseat, e tudo o que precisa para começar o dia melhor. <br>
+                    Perfeito para se preparar para codar ☕
+                </p>
+            </div>
+
+            <form>
+                <label for="email">Insira seu e-mail:</label>
+                <div class="limiter">
+                    <div class="input-wrapper">
+                        <input type="email" placeholder="oi@rocketseat.com.br" id="email">
+                        <button id="submitButton">
+                            <img src="assets/send.svg" alt="diagonal triangle icon" class="icon">
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <a href="#" class="link">
+                deixe-me ler primeiro
+                <div class="icon">
+                    <img src="assets/arrow-right.svg" alt="arrow right icon">
+                </div>
+            </a>
+        </section>
+    </main>
+    <script type="text/javascript">
+        const submitButton = document.querySelector("#submitButton")
+
+        submitButton.onclick = ev => ev.preventDefault() 
+    </script>
+</body>
+
+</html>

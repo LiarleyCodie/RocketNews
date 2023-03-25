@@ -1,0 +1,245 @@
+:root {
+    font-size: 62.5%;
+
+    --body-bg-color: #121214;
+    --text-color: #E1E1E6;
+    --title-color: #04D361;
+    --form-color: #A8A8A8;
+    --bg-button-color: #8257e5;
+    --bg-button-color-hover: #a37cfc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'League Spartan', sans-serif;
+    display: flex;
+}
+
+.wrapper {
+    background: var(--body-bg-color);
+    width: 100%;
+    max-width: 50rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+    padding: 2rem 2rem 10rem;
+    position: relative;
+}
+
+.wrapper .section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    row-gap: 5rem;
+}
+
+.section .title {
+    color: var(--title-color);
+    font-size: 2.6rem;
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;
+}
+
+.section .description {
+    color: var(--form-color);
+    font-size: 1.4rem;
+    line-height: 175%;
+    text-align: justify;
+}
+
+.section .description p:nth-child(1) {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.section form {
+    width: 100%;
+}
+
+
+form label {
+    color: var(--form-color);
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+form .input-wrapper {
+    display: flex;
+    margin-top: 1rem;
+}
+
+form .input-wrapper input[type="email"]:focus-within {
+    outline: 4px solid #8257e599;
+    border-radius: 0.5rem;
+}
+
+form .input-wrapper input[type="email"] {
+    width: 100%;
+    padding: 1.3rem;
+    border-style: none;
+    font-family: inherit;
+    border-left: 4px solid var(--title-color);
+    font-size: 1.6rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+form .input-wrapper button {
+    width: 5rem;
+    border-style: none;
+    background: var(--bg-button-color);
+    border-radius: 0 0.5rem 0.5rem 0;
+    display: grid;
+    place-items: center;
+    transition: background 150ms ease;
+}
+
+form .input-wrapper button:focus-within {
+    outline: 4px solid #8257e599;
+    border-radius: 0.5rem;
+}
+
+form .input-wrapper button:hover {
+    background: var(--bg-button-color-hover);
+}
+
+form .input-wrapper button .icon {
+    width: 1.75rem;
+}
+
+.link {
+    display: flex;
+    width: 100%;
+    color: var(--bg-button-color);
+    font-size: 1.4rem;
+    font-weight: 500;
+    align-items: center;
+    column-gap: 0.5rem;
+    padding: 0.5rem 0;
+}
+
+.link:focus-within {
+    outline: 4px solid #8257e599;
+}
+
+.link .icon {
+    display: flex;
+    width: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        background: url("assets/read_news.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .wrapper .header {
+        width: 80%;
+        margin-bottom: 4rem;
+    }
+
+    .wrapper .section {
+        row-gap: 0.5rem;
+    }
+
+    .section .title {
+        text-align: start;
+    }
+    
+    .section .description {
+        font-size: 1.6rem;
+    }
+    
+
+    form {
+        margin: 2rem 0 4rem;
+    }
+
+    form label {
+        font-size: 1.6rem;
+    }
+    
+    form .input-wrapper input[type="email"] {
+        font-size: 2.2rem;
+    }
+
+    .link {
+        font-size: 1.8rem;
+    }
+    .link .icon {
+        width: 2.6rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .wrapper {
+        max-width: 55rem;
+        padding: 3rem;
+    }
+
+    .wrapper .header {
+        width: 60%;
+    }
+
+    .wrapper .section {
+        align-items: start;
+        row-gap: 0.5rem;
+    }
+
+    .section .title {
+        font-size: 2rem;
+    }
+    
+    .section .description {
+        font-size: 1.4rem;
+        text-align: start;
+        line-height: 150%;
+    }
+
+    form label {
+        font-size: 1.4rem;
+    }
+    
+    form .limiter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 4.5rem;
+        position: relative;
+    }
+
+    form .input-wrapper {
+        width: 130%;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        box-shadow: 0 3rem 3rem -1.5rem rgba(0,0,0,1);
+    }
+
+    form .input-wrapper input[type="email"] {
+        font-size: 1.8rem;
+    }
+
+    .link {
+        font-size: 1.6rem;
+    }
+    .link .icon {
+        width: 2.2rem;
+    }
+}
