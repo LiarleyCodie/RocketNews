@@ -20,6 +20,7 @@
 
 <body>
     <main class="wrapper">
+
         <header class="header">
             <img src="assets/logo.svg" alt="RocketNews" class="logo">
         </header>
@@ -59,11 +60,25 @@
             </a>
         </section>
     </main>
-    <script type="text/javascript">
-        const submitButton = document.querySelector("#submitButton")
 
-        submitButton.onclick = ev => ev.preventDefault() 
-    </script>
+    <div id="modalWrapper" class="alert-modal open">
+        <div class="backdrop"></div>
+        <dialog id="modal" class="modal" open>
+            <h1>
+                <span class="congratulations">
+                <strong class="congratulations">Parabéns!</strong>
+                </span>
+                <span class="text">
+                    Você será informado sobre todas as novidades e notícias da
+                </span>
+                <span class="title">
+                    <strong>RocketSeat</strong>
+                </span>
+            </h1>
+        </dialog>
+    </div>
+    
+    <script src="index.js"></script>
 </body>
 
 </html>

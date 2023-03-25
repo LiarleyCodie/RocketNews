@@ -27,6 +27,97 @@ body {
     display: flex;
 }
 
+.alert-modal {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+.backdrop {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background: #a37cfc55;
+    height: 100%;
+    animation: opacityIn 0.5s ease backwards;
+}
+
+.alert-modal.open {
+    display: block;
+}
+
+.alert-modal.open .backdrop {
+    display: block;
+}
+
+.modal {
+    width: 90%;
+    max-width: 46rem;
+    padding: 3rem;
+    position: absolute;
+    border: none;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    
+    background: var(--body-bg-color);
+    color: var(--text-color);
+    border-radius: 1rem;
+    box-shadow: 0 2rem 3rem -2rem rgba(0,0,0,0.5);
+
+    animation: riseIn 0.5s ease backwards;
+}
+
+@keyframes opacityIn {
+    from {
+        opacity: 0;
+    }
+}
+
+@keyframes opacityOut {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes riseIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+        box-shadow: 0 0 0 -1.5rem rgba(0,0,0,0);
+    }
+}
+
+@keyframes riseOut {
+    to {
+        opacity: 0;
+        transform: scale(0.9);
+        box-shadow: 0 0 0 -1.5rem rgba(0,0,0,0);
+    }
+}
+
+.modal h1 {
+    font-weight: 400;
+    line-height: 130%;
+}
+
+.modal h1 .congratulations {
+    color: var(--title-color);
+    font-size: 3rem;
+    display: block;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.modal h1 .title {
+    color: var(--bg-button-color);
+    font-size: 2rem;
+} 
+
 .wrapper {
     background: var(--body-bg-color);
     width: 100%;
@@ -36,7 +127,6 @@ body {
     flex-direction: column;
     row-gap: 4rem;
     padding: 2rem 2rem 10rem;
-    position: relative;
 }
 
 .wrapper .section {
@@ -105,6 +195,7 @@ form .input-wrapper button {
     display: grid;
     place-items: center;
     transition: background 150ms ease;
+    cursor: pointer;
 }
 
 form .input-wrapper button:focus-within {
