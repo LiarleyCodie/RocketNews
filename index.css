@@ -40,7 +40,6 @@ body {
     width: 100%;
     background: #a37cfc55;
     height: 100%;
-    animation: opacityIn 0.5s ease backwards;
 }
 
 .alert-modal.open {
@@ -68,8 +67,6 @@ body {
     color: var(--text-color);
     border-radius: 1rem;
     box-shadow: 0 2rem 3rem -2rem rgba(0,0,0,0.5);
-
-    animation: riseIn 0.5s ease backwards;
 }
 
 @keyframes opacityIn {
@@ -111,6 +108,7 @@ body {
     display: block;
     text-align: center;
     margin-bottom: 2rem;
+    font-family: 'Work Sans', sans-serif;
 }
 
 .modal h1 .title {
@@ -187,6 +185,12 @@ form .input-wrapper input[type="email"] {
     border-radius: 0.5rem 0 0 0.5rem;
 }
 
+@keyframes alert {
+    50% {
+        background: #ff7777;
+    }
+}
+
 form .input-wrapper button {
     width: 5rem;
     border-style: none;
@@ -220,10 +224,17 @@ form .input-wrapper button .icon {
     align-items: center;
     column-gap: 0.5rem;
     padding: 0.5rem 0;
+    transition: padding 150ms ease, border-color 150ms ease 50ms;
+    border-left: 3px solid transparent;
 }
 
 .link:focus-within {
     outline: 4px solid #8257e599;
+}
+
+.link:hover {
+    border-left-color: var(--bg-button-color);
+    padding-left: 1rem;
 }
 
 .link .icon {
